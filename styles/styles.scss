@@ -1,0 +1,136 @@
+$main_color: rgb(238, 185, 238);
+$tab_border_color: rgb(179, 102, 179);
+$color_background: wheat;
+$main_font_color: #24179b;
+
+html{
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+    color:$main_font_color;
+    background-image: url("../images/background.jpg");
+    line-height: 30px;
+}
+
+header{
+    background-color: $main_color;
+    padding-bottom: 5px;
+}
+
+h1{
+    padding-top:30px;
+    text-align: center;
+}
+
+h2{
+    padding-left:15px;
+}
+
+ul{
+    margin-bottom:50px;
+    padding-bottom: 20px;
+}
+
+button{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+p{
+    font-weight: bold;
+}
+
+.player{
+    display:inline-block;
+    width:49.7%;
+    text-align: center;
+    background-color: $color_background;
+}
+
+.buttons-div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.info-area{
+    background-color: rgb(248, 203, 248);
+    border: solid 1px black;
+    color: rgb(121, 25, 25);
+    width: 320px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.game-description{
+    text-align: center;
+    background-color: rgb(149, 226, 250);
+    padding: 10px;
+}
+
+.information-accordian{
+    border: solid 1px black;
+    margin:20px;
+    padding-left:10px;
+    padding-right:10px;
+    background-color: $color_background;
+}
+
+.accordion-container{
+    background-color: rgb(231, 255, 253);
+}
+
+
+.how-to-play{
+    background-color: $main_color;
+    padding: 15px;
+    border-bottom: solid 1px $tab_border_color;
+    cursor: pointer;
+}
+
+.rules{
+    background-color: $main_color;
+    padding: 15px;
+    border-bottom: solid 1px $tab_border_color;
+    margin-top:-20px;
+    cursor: pointer;
+}
+
+.play-area{
+    margin: 20px;
+    border: solid 1px black;
+    background-color:$color_background;
+}
+
+@mixin button-shape($background-color, $font-color, $font-size, $padding-top-bot, $padding-sides, $font-weight, $cursor-type){
+    background-color: $background-color;
+    color: $font-color;
+    font-size: $font-size;
+    padding: $padding-top-bot $padding-sides;
+    font-weight: $font-weight;
+    cursor: $cursor-type;
+}
+
+#roll-dice{
+    @include button-shape($main_color, $main_font_color, 1.1em, 14px, 28px, bold, pointer)
+}
+
+#roll-dice:hover{
+    @include button-shape(rgb(218, 120, 218), $main_font_color, 1.1em, 14px, 28px, bold, pointer)
+}
+
+#new-game{
+    @include button-shape(rgb(138, 218, 63), $main_font_color, 1.1em, 14px, 28px, bold, pointer)
+}
+
+#new-game:hover{
+    @include button-shape(rgb(111, 187, 40), $main_font_color, 1.1em, 14px, 28px, bold, pointer)
+}
+
+#wrapper{
+    max-width: 800px;
+    margin:auto;
+    margin-top: -24px;
+    min-height:100vh;
+    background-color: rgba(255,255,255,0.85);
+}

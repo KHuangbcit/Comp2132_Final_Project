@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dice Game</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
+	</head>
+	<body>
+		<div id = "wrapper">
+            <header>
+            <h1>Dice Game</h1>
+            </header>
+            
+            <div class = "play-area">
+                <!--Player 1-->
+                <div class = "player">
+                    <h2>Player</h2>
+                    <img src="images/dice1.png" alt="" id="player-first-dice-image">
+                    <img src="images/dice1.png" alt="" id="player-second-dice-image">
+                    <div class = "info-area">    
+                        <p id = "p-first-dice">Dice 1: </p>
+                        <p id = "p-second-dice">Dice 2: </p>
+                        <p id="player-round-score">Score this round:</p>
+                        <p id="player-total-score">Total score:</p>
+                    </div>
+                </div>
+
+                <!--Computer-->
+                <div class = "player">
+                    <h2>Computer</h2>
+                    <img src="images/dice1.png" alt="" id="computer-first-dice-image">
+                    <img src="images/dice1.png" alt="" id="computer-second-dice-image">
+                    <div class = "info-area">  
+                        <p id = "c-first-dice">Dice 1: </p>
+                        <p id = "c-second-dice">Dice 2: </p>
+                        <p id="computer-round-score">Score this round: </p>
+                        <p id="computer-total-score">Total score: </p>
+                    </div>
+                </div>
+
+                <div class="game-description">
+                    <p id = "score-description">Player and Computer are tied.</p>
+                </div>
+                
+                <!--Roll Dice and New Game Button-->
+                <div class = "buttons-div">
+                    <button id = "roll-dice">Roll Dice</button>
+                    <button id = "new-game">New Game</button>
+                </div>
+
+            </div>
+
+            <div class = "information-accordian">
+                <div class="accordion-container">
+                    <h2 class = "tabs how-to-play">How to Play:</h2>
+                    <div class = "content">
+                        <ul>
+                            <li>Click the "Roll Dice" button to start the game.</li>
+                            <li>Click the "Roll Dice" button again to advance to the next round.</li>
+                            <li>The game ends after three rounds and whoever has the higher final score wins!</li>
+                            <li>Click "New Game" if you want to play again!</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 class="tabs rules">Rules:</h2>
+                    <div class = "content">
+                        <ul>
+                            <li>You and the computer will play a game consisting of 3 rounds</li>
+                            <li>Each round you and the computer will roll a pair or dice and the score for that round will be the sum of the dice.</li>
+                            <li>Your score for the round will be added to your total score.</li>
+                            <li>If you roll doubles, your score is doubled (example 2 and 2 will get you a score of 8).</li>
+                            <li>If you roll a 1, your score for the round is automatically 0.</li>
+                            <li>The player with the highest total score at the end of the 3 rounds wins the game!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+        </div>
+        <script src="scripts/jquery-3.4.1.min.js"></script>
+        <script src="scripts/scripts.js"></script>
+	</body>
+
+</html>
+
+
+
+
